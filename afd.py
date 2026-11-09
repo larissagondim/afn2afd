@@ -4,4 +4,4 @@ class AFD:
         self.alfabeto = set(alfabeto)
         self.transicoes = set(transicoes)
         self.inicial = inicial
-        set.finais = set(finais)
+        self.finais = set(finais)
