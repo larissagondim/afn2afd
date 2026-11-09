@@ -1,0 +1,3042 @@
+{
+ "nome": "afn1",
+ "descricao": "Termina em “a” ou em “ab” (tem transição ε)",
+ "afn": {
+  "estados": [
+   "q0",
+   "q1",
+   "q2"
+  ],
+  "alfabeto": [
+   "a",
+   "b"
+  ],
+  "inicial": "q0",
+  "finais": [
+   "q2"
+  ],
+  "transicoes": {
+   "q0": {
+    "a": [
+     "q0",
+     "q1"
+    ],
+    "b": [
+     "q0"
+    ]
+   },
+   "q1": {
+    "b": [
+     "q2"
+    ],
+    "ε": [
+     "q2"
+    ]
+   },
+   "q2": {}
+  }
+ },
+ "afd": {
+  "estados": [
+   "D0",
+   "D1",
+   "D2"
+  ],
+  "alfabeto": [
+   "a",
+   "b"
+  ],
+  "inicial": "D0",
+  "finais": [
+   "D1",
+   "D2"
+  ],
+  "transicoes": {
+   "D0": {
+    "a": "D1",
+    "b": "D0"
+   },
+   "D1": {
+    "a": "D1",
+    "b": "D2"
+   },
+   "D2": {
+    "a": "D1",
+    "b": "D0"
+   }
+  }
+ },
+ "mapeamento": {
+  "D0": [
+   "q0"
+  ],
+  "D1": [
+   "q0",
+   "q1",
+   "q2"
+  ],
+  "D2": [
+   "q0",
+   "q2"
+  ]
+ },
+ "passos": [
+  {
+   "tipo": "inicio",
+   "conjunto": [
+    "q0"
+   ],
+   "fecho": [
+    "q0"
+   ],
+   "transicoes_epsilon_usadas": [],
+   "estado_afd": "D0",
+   "novo": true,
+   "e_final": false,
+   "finais_no_conjunto": []
+  },
+  {
+   "tipo": "transicao",
+   "origem": "D0",
+   "conjunto": [
+    "q0"
+   ],
+   "simbolo": "a",
+   "mover": [
+    "q0",
+    "q1"
+   ],
+   "transicoes_afn_usadas": [
+    [
+     "q0",
+     "a",
+     "q0"
+    ],
+    [
+     "q0",
+     "a",
+     "q1"
+    ]
+   ],
+   "sem_transicao": [],
+   "fecho": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "transicoes_epsilon_usadas": [
+    [
+     "q1",
+     "ε",
+     "q2"
+    ]
+   ],
+   "destino": "D1",
+   "destino_novo": true,
+   "e_final": true,
+   "finais_no_conjunto": [
+    "q2"
+   ],
+   "poco": false
+  },
+  {
+   "tipo": "transicao",
+   "origem": "D0",
+   "conjunto": [
+    "q0"
+   ],
+   "simbolo": "b",
+   "mover": [
+    "q0"
+   ],
+   "transicoes_afn_usadas": [
+    [
+     "q0",
+     "b",
+     "q0"
+    ]
+   ],
+   "sem_transicao": [],
+   "fecho": [
+    "q0"
+   ],
+   "transicoes_epsilon_usadas": [],
+   "destino": "D0",
+   "destino_novo": false,
+   "e_final": false,
+   "finais_no_conjunto": [],
+   "poco": false
+  },
+  {
+   "tipo": "transicao",
+   "origem": "D1",
+   "conjunto": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "simbolo": "a",
+   "mover": [
+    "q0",
+    "q1"
+   ],
+   "transicoes_afn_usadas": [
+    [
+     "q0",
+     "a",
+     "q0"
+    ],
+    [
+     "q0",
+     "a",
+     "q1"
+    ]
+   ],
+   "sem_transicao": [
+    "q1",
+    "q2"
+   ],
+   "fecho": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "transicoes_epsilon_usadas": [
+    [
+     "q1",
+     "ε",
+     "q2"
+    ]
+   ],
+   "destino": "D1",
+   "destino_novo": false,
+   "e_final": true,
+   "finais_no_conjunto": [
+    "q2"
+   ],
+   "poco": false
+  },
+  {
+   "tipo": "transicao",
+   "origem": "D1",
+   "conjunto": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "simbolo": "b",
+   "mover": [
+    "q0",
+    "q2"
+   ],
+   "transicoes_afn_usadas": [
+    [
+     "q0",
+     "b",
+     "q0"
+    ],
+    [
+     "q1",
+     "b",
+     "q2"
+    ]
+   ],
+   "sem_transicao": [
+    "q2"
+   ],
+   "fecho": [
+    "q0",
+    "q2"
+   ],
+   "transicoes_epsilon_usadas": [],
+   "destino": "D2",
+   "destino_novo": true,
+   "e_final": true,
+   "finais_no_conjunto": [
+    "q2"
+   ],
+   "poco": false
+  },
+  {
+   "tipo": "transicao",
+   "origem": "D2",
+   "conjunto": [
+    "q0",
+    "q2"
+   ],
+   "simbolo": "a",
+   "mover": [
+    "q0",
+    "q1"
+   ],
+   "transicoes_afn_usadas": [
+    [
+     "q0",
+     "a",
+     "q0"
+    ],
+    [
+     "q0",
+     "a",
+     "q1"
+    ]
+   ],
+   "sem_transicao": [
+    "q2"
+   ],
+   "fecho": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "transicoes_epsilon_usadas": [
+    [
+     "q1",
+     "ε",
+     "q2"
+    ]
+   ],
+   "destino": "D1",
+   "destino_novo": false,
+   "e_final": true,
+   "finais_no_conjunto": [
+    "q2"
+   ],
+   "poco": false
+  },
+  {
+   "tipo": "transicao",
+   "origem": "D2",
+   "conjunto": [
+    "q0",
+    "q2"
+   ],
+   "simbolo": "b",
+   "mover": [
+    "q0"
+   ],
+   "transicoes_afn_usadas": [
+    [
+     "q0",
+     "b",
+     "q0"
+    ]
+   ],
+   "sem_transicao": [
+    "q2"
+   ],
+   "fecho": [
+    "q0"
+   ],
+   "transicoes_epsilon_usadas": [],
+   "destino": "D0",
+   "destino_novo": false,
+   "e_final": false,
+   "finais_no_conjunto": [],
+   "poco": false
+  },
+  {
+   "tipo": "fim",
+   "n_afn": 3,
+   "n_afd": 3,
+   "finais": [
+    "D1",
+    "D2"
+   ],
+   "poco": null
+  }
+ ],
+ "simulacao_afn": {
+  "tamanho_max": 8,
+  "estados_apos": {
+   "": [
+    "q0"
+   ],
+   "a": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "b": [
+    "q0"
+   ],
+   "aa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ab": [
+    "q0",
+    "q2"
+   ],
+   "ba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bb": [
+    "q0"
+   ],
+   "aaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aab": [
+    "q0",
+    "q2"
+   ],
+   "aba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abb": [
+    "q0"
+   ],
+   "baa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bab": [
+    "q0",
+    "q2"
+   ],
+   "bba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbb": [
+    "q0"
+   ],
+   "aaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaab": [
+    "q0",
+    "q2"
+   ],
+   "aaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabb": [
+    "q0"
+   ],
+   "abaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abab": [
+    "q0",
+    "q2"
+   ],
+   "abba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbb": [
+    "q0"
+   ],
+   "baaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baab": [
+    "q0",
+    "q2"
+   ],
+   "baba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babb": [
+    "q0"
+   ],
+   "bbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbab": [
+    "q0",
+    "q2"
+   ],
+   "bbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbb": [
+    "q0"
+   ],
+   "aaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaab": [
+    "q0",
+    "q2"
+   ],
+   "aaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabb": [
+    "q0"
+   ],
+   "aabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabab": [
+    "q0",
+    "q2"
+   ],
+   "aabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbb": [
+    "q0"
+   ],
+   "abaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaab": [
+    "q0",
+    "q2"
+   ],
+   "ababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababb": [
+    "q0"
+   ],
+   "abbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbab": [
+    "q0",
+    "q2"
+   ],
+   "abbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbb": [
+    "q0"
+   ],
+   "baaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaab": [
+    "q0",
+    "q2"
+   ],
+   "baaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabb": [
+    "q0"
+   ],
+   "babaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babab": [
+    "q0",
+    "q2"
+   ],
+   "babba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbb": [
+    "q0"
+   ],
+   "bbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaab": [
+    "q0",
+    "q2"
+   ],
+   "bbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabb": [
+    "q0"
+   ],
+   "bbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbab": [
+    "q0",
+    "q2"
+   ],
+   "bbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbb": [
+    "q0"
+   ],
+   "aaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaab": [
+    "q0",
+    "q2"
+   ],
+   "aaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaabb": [
+    "q0"
+   ],
+   "aaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabab": [
+    "q0",
+    "q2"
+   ],
+   "aaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbb": [
+    "q0"
+   ],
+   "aabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaab": [
+    "q0",
+    "q2"
+   ],
+   "aababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aababb": [
+    "q0"
+   ],
+   "aabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbab": [
+    "q0",
+    "q2"
+   ],
+   "aabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbb": [
+    "q0"
+   ],
+   "abaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaab": [
+    "q0",
+    "q2"
+   ],
+   "abaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaabb": [
+    "q0"
+   ],
+   "ababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababab": [
+    "q0",
+    "q2"
+   ],
+   "ababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbb": [
+    "q0"
+   ],
+   "abbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaab": [
+    "q0",
+    "q2"
+   ],
+   "abbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbabb": [
+    "q0"
+   ],
+   "abbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbab": [
+    "q0",
+    "q2"
+   ],
+   "abbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbb": [
+    "q0"
+   ],
+   "baaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaab": [
+    "q0",
+    "q2"
+   ],
+   "baaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaabb": [
+    "q0"
+   ],
+   "baabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabab": [
+    "q0",
+    "q2"
+   ],
+   "baabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbb": [
+    "q0"
+   ],
+   "babaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaab": [
+    "q0",
+    "q2"
+   ],
+   "bababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bababb": [
+    "q0"
+   ],
+   "babbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbab": [
+    "q0",
+    "q2"
+   ],
+   "babbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbb": [
+    "q0"
+   ],
+   "bbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaabb": [
+    "q0"
+   ],
+   "bbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabab": [
+    "q0",
+    "q2"
+   ],
+   "bbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbb": [
+    "q0"
+   ],
+   "bbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbabb": [
+    "q0"
+   ],
+   "bbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbb": [
+    "q0"
+   ],
+   "aaaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaaab": [
+    "q0",
+    "q2"
+   ],
+   "aaaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaabb": [
+    "q0"
+   ],
+   "aaaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaabab": [
+    "q0",
+    "q2"
+   ],
+   "aaaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaabbb": [
+    "q0"
+   ],
+   "aaabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabaab": [
+    "q0",
+    "q2"
+   ],
+   "aaababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaababb": [
+    "q0"
+   ],
+   "aaabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbab": [
+    "q0",
+    "q2"
+   ],
+   "aaabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbbb": [
+    "q0"
+   ],
+   "aabaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaaab": [
+    "q0",
+    "q2"
+   ],
+   "aabaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaabb": [
+    "q0"
+   ],
+   "aababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aababab": [
+    "q0",
+    "q2"
+   ],
+   "aababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aababbb": [
+    "q0"
+   ],
+   "aabbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbaab": [
+    "q0",
+    "q2"
+   ],
+   "aabbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbabb": [
+    "q0"
+   ],
+   "aabbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbab": [
+    "q0",
+    "q2"
+   ],
+   "aabbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbbb": [
+    "q0"
+   ],
+   "abaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaaab": [
+    "q0",
+    "q2"
+   ],
+   "abaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaabb": [
+    "q0"
+   ],
+   "abaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaabab": [
+    "q0",
+    "q2"
+   ],
+   "abaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaabbb": [
+    "q0"
+   ],
+   "ababaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababaab": [
+    "q0",
+    "q2"
+   ],
+   "abababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abababb": [
+    "q0"
+   ],
+   "ababbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbab": [
+    "q0",
+    "q2"
+   ],
+   "ababbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbbb": [
+    "q0"
+   ],
+   "abbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaaab": [
+    "q0",
+    "q2"
+   ],
+   "abbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaabb": [
+    "q0"
+   ],
+   "abbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbabab": [
+    "q0",
+    "q2"
+   ],
+   "abbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbabbb": [
+    "q0"
+   ],
+   "abbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbaab": [
+    "q0",
+    "q2"
+   ],
+   "abbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbabb": [
+    "q0"
+   ],
+   "abbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbab": [
+    "q0",
+    "q2"
+   ],
+   "abbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbbb": [
+    "q0"
+   ],
+   "baaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaaab": [
+    "q0",
+    "q2"
+   ],
+   "baaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaabb": [
+    "q0"
+   ],
+   "baaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaabab": [
+    "q0",
+    "q2"
+   ],
+   "baaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaabbb": [
+    "q0"
+   ],
+   "baabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabaab": [
+    "q0",
+    "q2"
+   ],
+   "baababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baababb": [
+    "q0"
+   ],
+   "baabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbab": [
+    "q0",
+    "q2"
+   ],
+   "baabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbbb": [
+    "q0"
+   ],
+   "babaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaaab": [
+    "q0",
+    "q2"
+   ],
+   "babaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaabb": [
+    "q0"
+   ],
+   "bababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bababab": [
+    "q0",
+    "q2"
+   ],
+   "bababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bababbb": [
+    "q0"
+   ],
+   "babbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbaab": [
+    "q0",
+    "q2"
+   ],
+   "babbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbabb": [
+    "q0"
+   ],
+   "babbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbab": [
+    "q0",
+    "q2"
+   ],
+   "babbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbbb": [
+    "q0"
+   ],
+   "bbaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaabb": [
+    "q0"
+   ],
+   "bbaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaabab": [
+    "q0",
+    "q2"
+   ],
+   "bbaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaabbb": [
+    "q0"
+   ],
+   "bbabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabaab": [
+    "q0",
+    "q2"
+   ],
+   "bbababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbababb": [
+    "q0"
+   ],
+   "bbabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbab": [
+    "q0",
+    "q2"
+   ],
+   "bbabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbbb": [
+    "q0"
+   ],
+   "bbbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaabb": [
+    "q0"
+   ],
+   "bbbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbabab": [
+    "q0",
+    "q2"
+   ],
+   "bbbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbabbb": [
+    "q0"
+   ],
+   "bbbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbabb": [
+    "q0"
+   ],
+   "bbbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbbb": [
+    "q0"
+   ],
+   "aaaaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaaaab": [
+    "q0",
+    "q2"
+   ],
+   "aaaaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaaabb": [
+    "q0"
+   ],
+   "aaaaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaabab": [
+    "q0",
+    "q2"
+   ],
+   "aaaaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaaabbb": [
+    "q0"
+   ],
+   "aaaabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaabaab": [
+    "q0",
+    "q2"
+   ],
+   "aaaababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaababb": [
+    "q0"
+   ],
+   "aaaabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaabbab": [
+    "q0",
+    "q2"
+   ],
+   "aaaabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaaabbbb": [
+    "q0"
+   ],
+   "aaabaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabaaab": [
+    "q0",
+    "q2"
+   ],
+   "aaabaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabaabb": [
+    "q0"
+   ],
+   "aaababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaababab": [
+    "q0",
+    "q2"
+   ],
+   "aaababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaababbb": [
+    "q0"
+   ],
+   "aaabbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbaab": [
+    "q0",
+    "q2"
+   ],
+   "aaabbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbabb": [
+    "q0"
+   ],
+   "aaabbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbbab": [
+    "q0",
+    "q2"
+   ],
+   "aaabbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aaabbbbb": [
+    "q0"
+   ],
+   "aabaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaaaab": [
+    "q0",
+    "q2"
+   ],
+   "aabaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaaabb": [
+    "q0"
+   ],
+   "aabaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaabab": [
+    "q0",
+    "q2"
+   ],
+   "aabaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabaabbb": [
+    "q0"
+   ],
+   "aababaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aababaab": [
+    "q0",
+    "q2"
+   ],
+   "aabababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabababb": [
+    "q0"
+   ],
+   "aababbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aababbab": [
+    "q0",
+    "q2"
+   ],
+   "aababbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aababbbb": [
+    "q0"
+   ],
+   "aabbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbaaab": [
+    "q0",
+    "q2"
+   ],
+   "aabbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbaabb": [
+    "q0"
+   ],
+   "aabbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbabab": [
+    "q0",
+    "q2"
+   ],
+   "aabbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbabbb": [
+    "q0"
+   ],
+   "aabbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbaab": [
+    "q0",
+    "q2"
+   ],
+   "aabbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbabb": [
+    "q0"
+   ],
+   "aabbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbbab": [
+    "q0",
+    "q2"
+   ],
+   "aabbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "aabbbbbb": [
+    "q0"
+   ],
+   "abaaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaaaab": [
+    "q0",
+    "q2"
+   ],
+   "abaaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaaabb": [
+    "q0"
+   ],
+   "abaaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaabab": [
+    "q0",
+    "q2"
+   ],
+   "abaaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaaabbb": [
+    "q0"
+   ],
+   "abaabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaabaab": [
+    "q0",
+    "q2"
+   ],
+   "abaababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaababb": [
+    "q0"
+   ],
+   "abaabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaabbab": [
+    "q0",
+    "q2"
+   ],
+   "abaabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abaabbbb": [
+    "q0"
+   ],
+   "ababaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababaaab": [
+    "q0",
+    "q2"
+   ],
+   "ababaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababaabb": [
+    "q0"
+   ],
+   "abababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abababab": [
+    "q0",
+    "q2"
+   ],
+   "abababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abababbb": [
+    "q0"
+   ],
+   "ababbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbaab": [
+    "q0",
+    "q2"
+   ],
+   "ababbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbabb": [
+    "q0"
+   ],
+   "ababbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbbab": [
+    "q0",
+    "q2"
+   ],
+   "ababbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "ababbbbb": [
+    "q0"
+   ],
+   "abbaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaaaab": [
+    "q0",
+    "q2"
+   ],
+   "abbaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaaabb": [
+    "q0"
+   ],
+   "abbaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaabab": [
+    "q0",
+    "q2"
+   ],
+   "abbaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbaabbb": [
+    "q0"
+   ],
+   "abbabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbabaab": [
+    "q0",
+    "q2"
+   ],
+   "abbababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbababb": [
+    "q0"
+   ],
+   "abbabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbabbab": [
+    "q0",
+    "q2"
+   ],
+   "abbabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbabbbb": [
+    "q0"
+   ],
+   "abbbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbaaab": [
+    "q0",
+    "q2"
+   ],
+   "abbbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbaabb": [
+    "q0"
+   ],
+   "abbbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbabab": [
+    "q0",
+    "q2"
+   ],
+   "abbbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbabbb": [
+    "q0"
+   ],
+   "abbbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbaab": [
+    "q0",
+    "q2"
+   ],
+   "abbbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbabb": [
+    "q0"
+   ],
+   "abbbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbbab": [
+    "q0",
+    "q2"
+   ],
+   "abbbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "abbbbbbb": [
+    "q0"
+   ],
+   "baaaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaaaab": [
+    "q0",
+    "q2"
+   ],
+   "baaaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaaabb": [
+    "q0"
+   ],
+   "baaaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaabab": [
+    "q0",
+    "q2"
+   ],
+   "baaaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaaabbb": [
+    "q0"
+   ],
+   "baaabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaabaab": [
+    "q0",
+    "q2"
+   ],
+   "baaababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaababb": [
+    "q0"
+   ],
+   "baaabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaabbab": [
+    "q0",
+    "q2"
+   ],
+   "baaabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baaabbbb": [
+    "q0"
+   ],
+   "baabaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabaaab": [
+    "q0",
+    "q2"
+   ],
+   "baabaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabaabb": [
+    "q0"
+   ],
+   "baababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baababab": [
+    "q0",
+    "q2"
+   ],
+   "baababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baababbb": [
+    "q0"
+   ],
+   "baabbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbaab": [
+    "q0",
+    "q2"
+   ],
+   "baabbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbabb": [
+    "q0"
+   ],
+   "baabbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbbab": [
+    "q0",
+    "q2"
+   ],
+   "baabbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "baabbbbb": [
+    "q0"
+   ],
+   "babaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaaaab": [
+    "q0",
+    "q2"
+   ],
+   "babaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaaabb": [
+    "q0"
+   ],
+   "babaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaabab": [
+    "q0",
+    "q2"
+   ],
+   "babaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babaabbb": [
+    "q0"
+   ],
+   "bababaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bababaab": [
+    "q0",
+    "q2"
+   ],
+   "babababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babababb": [
+    "q0"
+   ],
+   "bababbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bababbab": [
+    "q0",
+    "q2"
+   ],
+   "bababbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bababbbb": [
+    "q0"
+   ],
+   "babbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbaaab": [
+    "q0",
+    "q2"
+   ],
+   "babbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbaabb": [
+    "q0"
+   ],
+   "babbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbabab": [
+    "q0",
+    "q2"
+   ],
+   "babbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbabbb": [
+    "q0"
+   ],
+   "babbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbaab": [
+    "q0",
+    "q2"
+   ],
+   "babbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbabb": [
+    "q0"
+   ],
+   "babbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbbab": [
+    "q0",
+    "q2"
+   ],
+   "babbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "babbbbbb": [
+    "q0"
+   ],
+   "bbaaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbaaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaaabb": [
+    "q0"
+   ],
+   "bbaaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaabab": [
+    "q0",
+    "q2"
+   ],
+   "bbaaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaaabbb": [
+    "q0"
+   ],
+   "bbaabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaabaab": [
+    "q0",
+    "q2"
+   ],
+   "bbaababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaababb": [
+    "q0"
+   ],
+   "bbaabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaabbab": [
+    "q0",
+    "q2"
+   ],
+   "bbaabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbaabbbb": [
+    "q0"
+   ],
+   "bbabaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbabaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabaabb": [
+    "q0"
+   ],
+   "bbababaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbababab": [
+    "q0",
+    "q2"
+   ],
+   "bbababba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbababbb": [
+    "q0"
+   ],
+   "bbabbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbaab": [
+    "q0",
+    "q2"
+   ],
+   "bbabbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbabb": [
+    "q0"
+   ],
+   "bbabbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbbab": [
+    "q0",
+    "q2"
+   ],
+   "bbabbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbabbbbb": [
+    "q0"
+   ],
+   "bbbaaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbaaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaaabb": [
+    "q0"
+   ],
+   "bbbaabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaabab": [
+    "q0",
+    "q2"
+   ],
+   "bbbaabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbaabbb": [
+    "q0"
+   ],
+   "bbbabaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbabaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbababa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbababb": [
+    "q0"
+   ],
+   "bbbabbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbabbab": [
+    "q0",
+    "q2"
+   ],
+   "bbbabbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbabbbb": [
+    "q0"
+   ],
+   "bbbbaaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbaaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbaaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbaabb": [
+    "q0"
+   ],
+   "bbbbabaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbabab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbabba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbabbb": [
+    "q0"
+   ],
+   "bbbbbaaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbaab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbbaba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbabb": [
+    "q0"
+   ],
+   "bbbbbbaa": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbbab": [
+    "q0",
+    "q2"
+   ],
+   "bbbbbbba": [
+    "q0",
+    "q1",
+    "q2"
+   ],
+   "bbbbbbbb": [
+    "q0"
+   ]
+  },
+  "aceita": {
+   "": false,
+   "a": true,
+   "b": false,
+   "aa": true,
+   "ab": true,
+   "ba": true,
+   "bb": false,
+   "aaa": true,
+   "aab": true,
+   "aba": true,
+   "abb": false,
+   "baa": true,
+   "bab": true,
+   "bba": true,
+   "bbb": false,
+   "aaaa": true,
+   "aaab": true,
+   "aaba": true,
+   "aabb": false,
+   "abaa": true,
+   "abab": true,
+   "abba": true,
+   "abbb": false,
+   "baaa": true,
+   "baab": true,
+   "baba": true,
+   "babb": false,
+   "bbaa": true,
+   "bbab": true,
+   "bbba": true,
+   "bbbb": false,
+   "aaaaa": true,
+   "aaaab": true,
+   "aaaba": true,
+   "aaabb": false,
+   "aabaa": true,
+   "aabab": true,
+   "aabba": true,
+   "aabbb": false,
+   "abaaa": true,
+   "abaab": true,
+   "ababa": true,
+   "ababb": false,
+   "abbaa": true,
+   "abbab": true,
+   "abbba": true,
+   "abbbb": false,
+   "baaaa": true,
+   "baaab": true,
+   "baaba": true,
+   "baabb": false,
+   "babaa": true,
+   "babab": true,
+   "babba": true,
+   "babbb": false,
+   "bbaaa": true,
+   "bbaab": true,
+   "bbaba": true,
+   "bbabb": false,
+   "bbbaa": true,
+   "bbbab": true,
+   "bbbba": true,
+   "bbbbb": false,
+   "aaaaaa": true,
+   "aaaaab": true,
+   "aaaaba": true,
+   "aaaabb": false,
+   "aaabaa": true,
+   "aaabab": true,
+   "aaabba": true,
+   "aaabbb": false,
+   "aabaaa": true,
+   "aabaab": true,
+   "aababa": true,
+   "aababb": false,
+   "aabbaa": true,
+   "aabbab": true,
+   "aabbba": true,
+   "aabbbb": false,
+   "abaaaa": true,
+   "abaaab": true,
+   "abaaba": true,
+   "abaabb": false,
+   "ababaa": true,
+   "ababab": true,
+   "ababba": true,
+   "ababbb": false,
+   "abbaaa": true,
+   "abbaab": true,
+   "abbaba": true,
+   "abbabb": false,
+   "abbbaa": true,
+   "abbbab": true,
+   "abbbba": true,
+   "abbbbb": false,
+   "baaaaa": true,
+   "baaaab": true,
+   "baaaba": true,
+   "baaabb": false,
+   "baabaa": true,
+   "baabab": true,
+   "baabba": true,
+   "baabbb": false,
+   "babaaa": true,
+   "babaab": true,
+   "bababa": true,
+   "bababb": false,
+   "babbaa": true,
+   "babbab": true,
+   "babbba": true,
+   "babbbb": false,
+   "bbaaaa": true,
+   "bbaaab": true,
+   "bbaaba": true,
+   "bbaabb": false,
+   "bbabaa": true,
+   "bbabab": true,
+   "bbabba": true,
+   "bbabbb": false,
+   "bbbaaa": true,
+   "bbbaab": true,
+   "bbbaba": true,
+   "bbbabb": false,
+   "bbbbaa": true,
+   "bbbbab": true,
+   "bbbbba": true,
+   "bbbbbb": false,
+   "aaaaaaa": true,
+   "aaaaaab": true,
+   "aaaaaba": true,
+   "aaaaabb": false,
+   "aaaabaa": true,
+   "aaaabab": true,
+   "aaaabba": true,
+   "aaaabbb": false,
+   "aaabaaa": true,
+   "aaabaab": true,
+   "aaababa": true,
+   "aaababb": false,
+   "aaabbaa": true,
+   "aaabbab": true,
+   "aaabbba": true,
+   "aaabbbb": false,
+   "aabaaaa": true,
+   "aabaaab": true,
+   "aabaaba": true,
+   "aabaabb": false,
+   "aababaa": true,
+   "aababab": true,
+   "aababba": true,
+   "aababbb": false,
+   "aabbaaa": true,
+   "aabbaab": true,
+   "aabbaba": true,
+   "aabbabb": false,
+   "aabbbaa": true,
+   "aabbbab": true,
+   "aabbbba": true,
+   "aabbbbb": false,
+   "abaaaaa": true,
+   "abaaaab": true,
+   "abaaaba": true,
+   "abaaabb": false,
+   "abaabaa": true,
+   "abaabab": true,
+   "abaabba": true,
+   "abaabbb": false,
+   "ababaaa": true,
+   "ababaab": true,
+   "abababa": true,
+   "abababb": false,
+   "ababbaa": true,
+   "ababbab": true,
+   "ababbba": true,
+   "ababbbb": false,
+   "abbaaaa": true,
+   "abbaaab": true,
+   "abbaaba": true,
+   "abbaabb": false,
+   "abbabaa": true,
+   "abbabab": true,
+   "abbabba": true,
+   "abbabbb": false,
+   "abbbaaa": true,
+   "abbbaab": true,
+   "abbbaba": true,
+   "abbbabb": false,
+   "abbbbaa": true,
+   "abbbbab": true,
+   "abbbbba": true,
+   "abbbbbb": false,
+   "baaaaaa": true,
+   "baaaaab": true,
+   "baaaaba": true,
+   "baaaabb": false,
+   "baaabaa": true,
+   "baaabab": true,
+   "baaabba": true,
+   "baaabbb": false,
+   "baabaaa": true,
+   "baabaab": true,
+   "baababa": true,
+   "baababb": false,
+   "baabbaa": true,
+   "baabbab": true,
+   "baabbba": true,
+   "baabbbb": false,
+   "babaaaa": true,
+   "babaaab": true,
+   "babaaba": true,
+   "babaabb": false,
+   "bababaa": true,
+   "bababab": true,
+   "bababba": true,
+   "bababbb": false,
+   "babbaaa": true,
+   "babbaab": true,
+   "babbaba": true,
+   "babbabb": false,
+   "babbbaa": true,
+   "babbbab": true,
+   "babbbba": true,
+   "babbbbb": false,
+   "bbaaaaa": true,
+   "bbaaaab": true,
+   "bbaaaba": true,
+   "bbaaabb": false,
+   "bbaabaa": true,
+   "bbaabab": true,
+   "bbaabba": true,
+   "bbaabbb": false,
+   "bbabaaa": true,
+   "bbabaab": true,
+   "bbababa": true,
+   "bbababb": false,
+   "bbabbaa": true,
+   "bbabbab": true,
+   "bbabbba": true,
+   "bbabbbb": false,
+   "bbbaaaa": true,
+   "bbbaaab": true,
+   "bbbaaba": true,
+   "bbbaabb": false,
+   "bbbabaa": true,
+   "bbbabab": true,
+   "bbbabba": true,
+   "bbbabbb": false,
+   "bbbbaaa": true,
+   "bbbbaab": true,
+   "bbbbaba": true,
+   "bbbbabb": false,
+   "bbbbbaa": true,
+   "bbbbbab": true,
+   "bbbbbba": true,
+   "bbbbbbb": false,
+   "aaaaaaaa": true,
+   "aaaaaaab": true,
+   "aaaaaaba": true,
+   "aaaaaabb": false,
+   "aaaaabaa": true,
+   "aaaaabab": true,
+   "aaaaabba": true,
+   "aaaaabbb": false,
+   "aaaabaaa": true,
+   "aaaabaab": true,
+   "aaaababa": true,
+   "aaaababb": false,
+   "aaaabbaa": true,
+   "aaaabbab": true,
+   "aaaabbba": true,
+   "aaaabbbb": false,
+   "aaabaaaa": true,
+   "aaabaaab": true,
+   "aaabaaba": true,
+   "aaabaabb": false,
+   "aaababaa": true,
+   "aaababab": true,
+   "aaababba": true,
+   "aaababbb": false,
+   "aaabbaaa": true,
+   "aaabbaab": true,
+   "aaabbaba": true,
+   "aaabbabb": false,
+   "aaabbbaa": true,
+   "aaabbbab": true,
+   "aaabbbba": true,
+   "aaabbbbb": false,
+   "aabaaaaa": true,
+   "aabaaaab": true,
+   "aabaaaba": true,
+   "aabaaabb": false,
+   "aabaabaa": true,
+   "aabaabab": true,
+   "aabaabba": true,
+   "aabaabbb": false,
+   "aababaaa": true,
+   "aababaab": true,
+   "aabababa": true,
+   "aabababb": false,
+   "aababbaa": true,
+   "aababbab": true,
+   "aababbba": true,
+   "aababbbb": false,
+   "aabbaaaa": true,
+   "aabbaaab": true,
+   "aabbaaba": true,
+   "aabbaabb": false,
+   "aabbabaa": true,
+   "aabbabab": true,
+   "aabbabba": true,
+   "aabbabbb": false,
+   "aabbbaaa": true,
+   "aabbbaab": true,
+   "aabbbaba": true,
+   "aabbbabb": false,
+   "aabbbbaa": true,
+   "aabbbbab": true,
+   "aabbbbba": true,
+   "aabbbbbb": false,
+   "abaaaaaa": true,
+   "abaaaaab": true,
+   "abaaaaba": true,
+   "abaaaabb": false,
+   "abaaabaa": true,
+   "abaaabab": true,
+   "abaaabba": true,
+   "abaaabbb": false,
+   "abaabaaa": true,
+   "abaabaab": true,
+   "abaababa": true,
+   "abaababb": false,
+   "abaabbaa": true,
+   "abaabbab": true,
+   "abaabbba": true,
+   "abaabbbb": false,
+   "ababaaaa": true,
+   "ababaaab": true,
+   "ababaaba": true,
+   "ababaabb": false,
+   "abababaa": true,
+   "abababab": true,
+   "abababba": true,
+   "abababbb": false,
+   "ababbaaa": true,
+   "ababbaab": true,
+   "ababbaba": true,
+   "ababbabb": false,
+   "ababbbaa": true,
+   "ababbbab": true,
+   "ababbbba": true,
+   "ababbbbb": false,
+   "abbaaaaa": true,
+   "abbaaaab": true,
+   "abbaaaba": true,
+   "abbaaabb": false,
+   "abbaabaa": true,
+   "abbaabab": true,
+   "abbaabba": true,
+   "abbaabbb": false,
+   "abbabaaa": true,
+   "abbabaab": true,
+   "abbababa": true,
+   "abbababb": false,
+   "abbabbaa": true,
+   "abbabbab": true,
+   "abbabbba": true,
+   "abbabbbb": false,
+   "abbbaaaa": true,
+   "abbbaaab": true,
+   "abbbaaba": true,
+   "abbbaabb": false,
+   "abbbabaa": true,
+   "abbbabab": true,
+   "abbbabba": true,
+   "abbbabbb": false,
+   "abbbbaaa": true,
+   "abbbbaab": true,
+   "abbbbaba": true,
+   "abbbbabb": false,
+   "abbbbbaa": true,
+   "abbbbbab": true,
+   "abbbbbba": true,
+   "abbbbbbb": false,
+   "baaaaaaa": true,
+   "baaaaaab": true,
+   "baaaaaba": true,
+   "baaaaabb": false,
+   "baaaabaa": true,
+   "baaaabab": true,
+   "baaaabba": true,
+   "baaaabbb": false,
+   "baaabaaa": true,
+   "baaabaab": true,
+   "baaababa": true,
+   "baaababb": false,
+   "baaabbaa": true,
+   "baaabbab": true,
+   "baaabbba": true,
+   "baaabbbb": false,
+   "baabaaaa": true,
+   "baabaaab": true,
+   "baabaaba": true,
+   "baabaabb": false,
+   "baababaa": true,
+   "baababab": true,
+   "baababba": true,
+   "baababbb": false,
+   "baabbaaa": true,
+   "baabbaab": true,
+   "baabbaba": true,
+   "baabbabb": false,
+   "baabbbaa": true,
+   "baabbbab": true,
+   "baabbbba": true,
+   "baabbbbb": false,
+   "babaaaaa": true,
+   "babaaaab": true,
+   "babaaaba": true,
+   "babaaabb": false,
+   "babaabaa": true,
+   "babaabab": true,
+   "babaabba": true,
+   "babaabbb": false,
+   "bababaaa": true,
+   "bababaab": true,
+   "babababa": true,
+   "babababb": false,
+   "bababbaa": true,
+   "bababbab": true,
+   "bababbba": true,
+   "bababbbb": false,
+   "babbaaaa": true,
+   "babbaaab": true,
+   "babbaaba": true,
+   "babbaabb": false,
+   "babbabaa": true,
+   "babbabab": true,
+   "babbabba": true,
+   "babbabbb": false,
+   "babbbaaa": true,
+   "babbbaab": true,
+   "babbbaba": true,
+   "babbbabb": false,
+   "babbbbaa": true,
+   "babbbbab": true,
+   "babbbbba": true,
+   "babbbbbb": false,
+   "bbaaaaaa": true,
+   "bbaaaaab": true,
+   "bbaaaaba": true,
+   "bbaaaabb": false,
+   "bbaaabaa": true,
+   "bbaaabab": true,
+   "bbaaabba": true,
+   "bbaaabbb": false,
+   "bbaabaaa": true,
+   "bbaabaab": true,
+   "bbaababa": true,
+   "bbaababb": false,
+   "bbaabbaa": true,
+   "bbaabbab": true,
+   "bbaabbba": true,
+   "bbaabbbb": false,
+   "bbabaaaa": true,
+   "bbabaaab": true,
+   "bbabaaba": true,
+   "bbabaabb": false,
+   "bbababaa": true,
+   "bbababab": true,
+   "bbababba": true,
+   "bbababbb": false,
+   "bbabbaaa": true,
+   "bbabbaab": true,
+   "bbabbaba": true,
+   "bbabbabb": false,
+   "bbabbbaa": true,
+   "bbabbbab": true,
+   "bbabbbba": true,
+   "bbabbbbb": false,
+   "bbbaaaaa": true,
+   "bbbaaaab": true,
+   "bbbaaaba": true,
+   "bbbaaabb": false,
+   "bbbaabaa": true,
+   "bbbaabab": true,
+   "bbbaabba": true,
+   "bbbaabbb": false,
+   "bbbabaaa": true,
+   "bbbabaab": true,
+   "bbbababa": true,
+   "bbbababb": false,
+   "bbbabbaa": true,
+   "bbbabbab": true,
+   "bbbabbba": true,
+   "bbbabbbb": false,
+   "bbbbaaaa": true,
+   "bbbbaaab": true,
+   "bbbbaaba": true,
+   "bbbbaabb": false,
+   "bbbbabaa": true,
+   "bbbbabab": true,
+   "bbbbabba": true,
+   "bbbbabbb": false,
+   "bbbbbaaa": true,
+   "bbbbbaab": true,
+   "bbbbbaba": true,
+   "bbbbbabb": false,
+   "bbbbbbaa": true,
+   "bbbbbbab": true,
+   "bbbbbbba": true,
+   "bbbbbbbb": false
+  }
+ },
+ "verificacao": {
+  "tamanho_max": 8,
+  "total": 511,
+  "divergencias": []
+ }
+}
