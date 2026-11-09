@@ -1,4 +1,5 @@
 {
+  "descricao": "a*b*c* com transições ε (gera estado poço)",
   "alfabeto": ["a", "b", "c"],
   "inicial": "p0",
   "finais": ["p1", "p2", "p3"],

@@ -1,4 +1,5 @@
 {
+  "descricao": "Termina em “a” ou em “ab” (tem transição ε)",
   "alfabeto": ["a", "b"],
   "inicial": "q0",
   "finais": ["q2"],

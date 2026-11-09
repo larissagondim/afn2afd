@@ -1,4 +1,5 @@
 {
+  "descricao": "3º símbolo a partir do fim é 1 (o AFD cresce: 4 → 8 estados)",
   "alfabeto": ["0", "1"],
   "inicial": "q0",
   "finais": ["q3"],
